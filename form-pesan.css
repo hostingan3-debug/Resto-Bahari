@@ -1,0 +1,256 @@
+/* Form pemesanan Resto Bahari */
+.form-section {
+  padding: 4rem 1.25rem;
+  text-align: center;
+}
+
+.form-section h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
+  color: var(--primary);
+}
+
+.order-form {
+  max-width: 720px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.order-form fieldset {
+  margin-bottom: 1.5rem;
+  padding: 1.4rem 1.5rem 1.5rem;
+  background: var(--white);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.order-form legend {
+  padding: 0 10px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--white);
+  background: var(--primary);
+  border-radius: 8px;
+}
+
+.field {
+  margin-top: 1rem;
+}
+
+.field label,
+.card-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.order-form input[type="text"],
+.order-form input[type="tel"],
+.order-form input[type="date"],
+.order-form input[type="number"] {
+  width: 100%;
+  padding: 11px 14px;
+  font: inherit;
+  color: var(--text);
+  background: #fff;
+  border: 1.5px solid #d3dfe3;
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.order-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(15, 76, 92, 0.15);
+}
+
+.order-form input:disabled {
+  background: #eef3f5;
+  color: #9aa8ad;
+  cursor: not-allowed;
+}
+
+.hint {
+  margin-top: 0.8rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.group-title {
+  margin: 1.3rem 0 0.4rem;
+  padding-bottom: 4px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+/* Baris item: checkbox + jumlah */
+.item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #edf2f4;
+}
+
+.item-check {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.item-check input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.item-check em {
+  margin-left: auto;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.order-form input.qty {
+  width: 76px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.total-line {
+  margin-top: 1.2rem;
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+.total-line strong {
+  color: var(--primary);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.3rem;
+}
+
+/* Pembayaran */
+.pay-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0.8rem;
+  padding: 12px 14px;
+  border: 1.5px solid #d3dfe3;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.pay-option:hover {
+  background: #f1f8f9;
+}
+
+.pay-option:has(input:checked) {
+  border-color: var(--primary);
+  background: #e6f2f4;
+}
+
+.pay-option input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary);
+}
+
+.pay-name {
+  font-weight: 600;
+}
+
+.logos {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logos img {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
+}
+
+.card-box {
+  margin: 0.6rem 0 0 1.8rem;
+  padding: 12px 14px;
+  background: #f6fafb;
+  border-radius: 8px;
+}
+
+/* Tombol & pesan */
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--primary-dark);
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.15s, filter 0.2s;
+}
+
+.btn-submit:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.form-error {
+  margin-bottom: 1rem;
+  padding: 10px 14px;
+  color: #9b1c1c;
+  background: #fdecec;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.order-result {
+  max-width: 720px;
+  margin: 1.5rem auto 0;
+  padding: 1.4rem 1.5rem;
+  text-align: left;
+  background: #e8f6ee;
+  border-left: 5px solid #2f9e62;
+  border-radius: 10px;
+}
+
+.order-result h3 {
+  margin-bottom: 0.6rem;
+  font-family: "Outfit", sans-serif;
+  color: #1f6f45;
+}
+
+.order-result ul {
+  margin: 0.4rem 0 0.4rem 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .order-form fieldset {
+    padding: 1.2rem 1rem 1.3rem;
+  }
+
+  .card-box {
+    margin-left: 0;
+  }
+
+  .logos img {
+    height: 22px;
+  }
+}
