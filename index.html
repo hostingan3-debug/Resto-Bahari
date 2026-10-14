@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="tabel-menu.css" />
+    <link rel="stylesheet" href="form-pesan.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -20,6 +21,7 @@
           <li><a href="#home" class="active">Home</a></li>
           <li><a href="#menu">Menu</a></li>
           <li><a href="#pesan">Cara Pesan</a></li>
+          <li><a href="#form-pesan">Form Pesan</a></li>
           <li><a href="#video">Video</a></li>
           <li><a href="#kontak">Tentang Kami</a></li>
         </ul>
@@ -162,6 +164,140 @@
       </ol>
     </section>
 
+    <section class="form-section" id="form-pesan">
+      <h2>Form Pemesanan</h2>
+      <p class="section-sub">Isi data di bawah ini untuk melakukan pemesanan</p>
+
+      <form id="form-pemesanan" class="order-form" novalidate>
+        <!-- Data pemesan -->
+        <fieldset>
+          <legend>Data Pemesan</legend>
+          <div class="field">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required />
+          </div>
+          <div class="field">
+            <label for="hp">No. HP</label>
+            <input type="tel" id="hp" name="hp" placeholder="08xxxxxxxxxx" inputmode="numeric" required />
+          </div>
+          <div class="field">
+            <label for="tanggal">Tanggal Booking</label>
+            <input type="date" id="tanggal" name="tanggal" required />
+          </div>
+        </fieldset>
+
+        <!-- Pilihan paket -->
+        <fieldset>
+          <legend>Pilihan Paket</legend>
+          <p class="hint">Centang menu yang diinginkan, lalu isi jumlah itemnya.</p>
+
+          <h3 class="group-title">Makanan</h3>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Nasi Goreng" data-price="3" /><span>Nasi Goreng</span><em>$3</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Nasi Goreng" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Ayam Bakar + Nasi" data-price="4" /><span>Ayam Bakar + Nasi</span><em>$4</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Ayam Bakar + Nasi" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Mie Ayam Bakso" data-price="3" /><span>Mie Ayam Bakso</span><em>$3</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Mie Ayam Bakso" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Ayam Goreng + Nasi" data-price="4" /><span>Ayam Goreng + Nasi</span><em>$4</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Ayam Goreng + Nasi" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Nasi Bakar" data-price="3" /><span>Nasi Bakar</span><em>$3</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Nasi Bakar" />
+          </div>
+
+          <h3 class="group-title">Minuman</h3>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Es Teh" data-price="1" /><span>Es Teh</span><em>$1</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Es Teh" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Es Jeruk" data-price="1" /><span>Es Jeruk</span><em>$1</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Es Jeruk" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Es Campur" data-price="2" /><span>Es Campur</span><em>$2</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Es Campur" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Es Kelapa" data-price="2" /><span>Es Kelapa</span><em>$2</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Es Kelapa" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Es Klepon" data-price="2" /><span>Es Klepon</span><em>$2</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Es Klepon" />
+          </div>
+
+          <h3 class="group-title">Dessert</h3>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Pisang Coklat" data-price="2" /><span>Pisang Coklat</span><em>$2</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Pisang Coklat" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Puding Karamel" data-price="2" /><span>Puding Karamel</span><em>$2</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Puding Karamel" />
+          </div>
+          <div class="item-row">
+            <label class="item-check"><input type="checkbox" name="menu" value="Es Krim Vanila" data-price="2" /><span>Es Krim Vanila</span><em>$2</em></label>
+            <input type="number" class="qty" min="1" value="1" disabled aria-label="Jumlah Es Krim Vanila" />
+          </div>
+
+          <p class="total-line">Total: <strong id="total">$0</strong></p>
+        </fieldset>
+
+        <!-- Pembayaran -->
+        <fieldset>
+          <legend>Pilihan Pembayaran</legend>
+
+          <label class="pay-option">
+            <input type="radio" name="pembayaran" value="Kartu Debit/Kredit" />
+            <span class="pay-name">Kartu Debit / Kredit</span>
+            <span class="logos">
+              <img src="img/visa.png" alt="Visa" onerror="this.style.display='none'" />
+              <img src="img/mastercard.png" alt="Mastercard" onerror="this.style.display='none'" />
+            </span>
+          </label>
+          <div class="card-box" id="card-box" hidden>
+            <label for="kartu">Nomor Kartu</label>
+            <input type="text" id="kartu" name="kartu" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" />
+          </div>
+
+          <label class="pay-option">
+            <input type="radio" name="pembayaran" value="GoPay" />
+            <span class="pay-name">GoPay</span>
+            <span class="logos"><img src="img/gopay.png" alt="GoPay" onerror="this.style.display='none'" /></span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="pembayaran" value="OVO" />
+            <span class="pay-name">OVO</span>
+            <span class="logos"><img src="img/ovo.png" alt="OVO" onerror="this.style.display='none'" /></span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="pembayaran" value="DANA" />
+            <span class="pay-name">DANA</span>
+            <span class="logos"><img src="img/dana.png" alt="DANA" onerror="this.style.display='none'" /></span>
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="pembayaran" value="ShopeePay" />
+            <span class="pay-name">ShopeePay</span>
+            <span class="logos"><img src="img/shopeepay.png" alt="ShopeePay" onerror="this.style.display='none'" /></span>
+          </label>
+        </fieldset>
+
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <button type="submit" class="btn-submit">Kirim Pesanan</button>
+      </form>
+
+      <div class="order-result" id="order-result" hidden></div>
+    </section>
+
     <section class="video-section" id="video">
       <h2>Video Promosi</h2>
       <p class="section-sub">Lihat suasana dan proses masak kami</p>
@@ -174,9 +310,10 @@
 
     <footer class="footer" id="kontak">
       <h2>Tentang Kami</h2>
-      <p>Contact :081295056171</p>
+      <p>Contact : 081295056171</p>
       <p>Jl. International No. 10, Tangerang Selatan, Banten.</p>
       <p class="copyright">&copy; 2026 Resto Bahari</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
